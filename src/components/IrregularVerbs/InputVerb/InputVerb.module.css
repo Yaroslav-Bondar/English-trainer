@@ -1,0 +1,14 @@
+.form__input_answer_right {
+    background-color: green;
+}
+.form__input_answer_wrong {
+    background-color: red;
+}
+
+.form__input {
+    /* background-color: transparent; */
+}
+.answer {
+    height: var(--font-size); 
+    /* calc(10px + 2vmin); */
+}

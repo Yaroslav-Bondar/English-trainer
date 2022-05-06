@@ -1,0 +1,6 @@
+.verb__img {
+    height: 40vmin;
+    max-width: 400px;
+    object-fit: contain;
+    pointer-events: none;
+}
