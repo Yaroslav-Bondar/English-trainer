@@ -4,7 +4,7 @@ import IrregularVerbsList from '../../components/IrregularVerbs/IrregularVerbsLi
 import { getRandomNumber } from '../../services/services';
 import { IRREGULAR_VERBS_DATA } from '../../data/irregularVerbs/irregularVerbsDataTmp';
 import { MAX_FORM_VERB, VERB_IMAGE_INDEX } from '../../constants/irregularVerbs';
-// import styles from './IrregularVerbs.module.css';
+import styles from './IrregularVerbs.module.css';
 
 const IrregularVerbs = () => {
     const [verb, setVerb] = useState();
@@ -31,14 +31,18 @@ const IrregularVerbs = () => {
     },[]);
     
     return (
-        <>irregular verbs
-            {verb &&
-                <IrregularVerbsList
-                    getRandomVerb = {getRandomVerb} 
-                    verb = {verb}
-                    verbForm = {verbForm}
-                    verbImagePath = {verbImagePath}
-                />}
+        <>  
+            <div className={styles.wrapper}>
+                {
+                    verb &&
+                        <IrregularVerbsList
+                            getRandomVerb = {getRandomVerb} 
+                            verb = {verb}
+                            verbForm = {verbForm}
+                            verbImagePath = {verbImagePath}
+                        />
+                }
+            </div>    
         </>
     );
 }

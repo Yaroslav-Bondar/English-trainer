@@ -1,8 +1,23 @@
 :root {
-  --font-size: calc(10px + 2vmin);
+  --font-size-l: calc(10px + 2vmin);
+  --font-size-xl: calc(10px + 3vmin);
+
   --color-malibu: #61dafb;
   --color-shark: #282c34;
   --color-white: #fff;
+  --color-red-light: #f2777a;
+  --color-bright-red: #ad0011;
+  --color-york: #92d192;
+  --color-lead:#202020;
+  --color-shaft: #242424;
+  --color-carbon: #2d2d2d;
+  --color-old-rose: #ba776d;
+
+}
+*,
+::after, 
+::before  {
+    box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -17,3 +32,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* .wrapper {
+  max-width: 900px;
+  padding: 0 15px;
+  margin: 0 auto;
+} */

@@ -1,14 +1,42 @@
-.form__input_answer_right {
-    background-color: green;
+/* .verb__native {
+    color: var(--color-malibu);
 }
-.form__input_answer_wrong {
-    background-color: red;
-}
+.verb__native, */
 
+.answer {
+    margin: 20px 0;
+}
+.input-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 2%;
+}
+@media screen and (max-width: 550px) {
+    .input-container {
+        grid-template-columns: auto;
+        grid-gap: 25px 0;
+    }
+}
 .form__input {
-    /* background-color: transparent; */
+    width: 100%;
+    border: none;
+    border-radius: 18px;
+    font-size: var(--font-size-l);
+    text-align: center;
+    background-color: var(--color-white);
+}
+.form__input:focus {
+    outline: none;
+    color: var(--color-lead);
+}
+.form__input.form__input_answer_wrong {
+    background-color: var(--color-red-light);
+}
+.form__input.form__input_answer_right {
+    background-color: var(--color-york);
 }
 .answer {
-    height: var(--font-size); 
-    /* calc(10px + 2vmin); */
+    height: var(--font-size-xl);
+    font-size: var(--font-size-xl); 
+    color: var(--color-bright-red);
 }

@@ -4,3 +4,11 @@
     object-fit: contain;
     pointer-events: none;
 }
+.verb__submit {
+    display: none;
+}
+.verb__native {
+    color: var(--color-malibu);
+    margin: 10px 0 30px 0;
+}
+
