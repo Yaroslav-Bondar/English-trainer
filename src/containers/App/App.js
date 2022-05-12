@@ -1,7 +1,6 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import HomePage from '../../containers/HomePage';
 import Header from '../../components/Header';
-import IrregularVerbs from '../IrregularVerbs';
+import routesConfig from '../../routes/routesConfig';
 // import logo from '../../logo.svg';
 import './App.css';
 
@@ -12,14 +11,13 @@ function App() {
         <BrowserRouter>
           <Header/>
           <Routes>
-            <Route
-              path = '/grammar-trainers'
-              element = <IrregularVerbs/>
-            />
-            <Route
-              path = '/'
-              element = <HomePage/>
-            />
+            {routesConfig.map((route, index) => 
+              <Route
+                key = {index}
+                path = {route.path}
+                element = {route.element}
+              />
+            )};
           </Routes>
         </BrowserRouter>
       </header>
