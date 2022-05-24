@@ -1,26 +1,31 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from '../../components/Header';
 import routesConfig from '../../routes/routesConfig';
+import IrregularVerbs from '../IrregularVerbs';
 // import logo from '../../logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
+      {/* <IrregularVerbs/> */}
         <BrowserRouter>
           <Header/>
-          <Routes>
-            {routesConfig.map((route, index) => 
-              <Route
-                key = {index}
-                path = {route.path}
-                element = {route.element}
-              />
-            )};
-          </Routes>
+          <main>
+            {/* <IrregularVerbs/> */}
+            <Routes>
+              {routesConfig.map((route, index) => 
+                <Route
+                  key = {index}
+                  path = {route.path}
+                  element = {route.element}
+                />
+              )};
+            </Routes>
+          </main>  
         </BrowserRouter>
-      </header>
+      </div>
     </div>
   );
 }

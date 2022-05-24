@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import InputVerb from '../InputVerb';
 import { checkAnswer } from '../../../services/services';
 import { CHECK_INPUT_IRREGULAR_VERB, MAX_FORM_VERB } from '../../../constants/irregularVerbs';
+import { PUBLIC_ASSETS } from '../../../constants/root';
 import styles from './IrregularVerbsList.module.css';
 
 const IrregularVerbsList = ({ verb,
@@ -11,7 +12,7 @@ const IrregularVerbsList = ({ verb,
                               verbImagePath }) => {
     const [inputValue, setInputValue] = useState('');
     const [answer, setAnswer] = useState(null);
-
+    const [img, setImg] = useState(null);
     function handleSubmit(event) {
         event.preventDefault();
         let delay = 1000;
@@ -26,8 +27,8 @@ const IrregularVerbsList = ({ verb,
     }
     return (
         <>  
-            <h3 className = {styles.verb__title}>Irregular Verbs</h3>          
-            <img className = {styles.verb__img} src={verbImagePath} alt="verb"/>
+            <h3 className = {styles.verb__title}>Irregular Verbs</h3>
+            <img className = {styles.verb__img} src={process.env.PUBLIC_URL + verbImagePath} alt="verb"/>
             <div className={styles.verb__native}>{verb[MAX_FORM_VERB]}</div>
             <form onSubmit={handleSubmit} className={styles.form}>
                 <InputVerb 

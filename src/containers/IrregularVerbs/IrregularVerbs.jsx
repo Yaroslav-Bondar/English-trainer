@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import IrregularVerbsList from '../../components/IrregularVerbs/IrregularVerbsList';
 import { getRandomNumber } from '../../services/services';
-import { IRREGULAR_VERBS_DATA } from '../../data/irregularVerbs/irregularVerbsDataTmp';
+import { IRREGULAR_VERBS_DATA } from '../../data/irregularVerbs/irregularVerbsDataPublic';
 import { MAX_FORM_VERB, VERB_IMAGE_INDEX } from '../../constants/irregularVerbs';
 import styles from './IrregularVerbs.module.css';
 

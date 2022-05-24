@@ -73,3 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # English-trainer
 English learning react-app.
 >>>>>>> 0f64c42d32298de412b5d9b906b5cae42e8f87d2
+
+Using the Public Folder
+## used to display images
+https://create-react-app.dev/docs/using-the-public-folder

@@ -1,0 +1,1 @@
+export const PUBLIC_ASSETS = 'process.env.PUBLIC_URL';
