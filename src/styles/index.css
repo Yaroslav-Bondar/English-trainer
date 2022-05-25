@@ -1,3 +1,7 @@
+/* reset styles */
+/* @import-normalize; */
+@import url('./normalize.css');
+
 :root {
   --font-size-l: calc(10px + 2vmin);
   --font-size-xl: calc(10px + 3vmin);
@@ -32,9 +36,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* .wrapper {
-  max-width: 900px;
+._container {
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-} */
+}
+._container_grow {
+  flex-grow: 1;
+}
+
+._wrapper {
+  max-width: 1000px;
+  padding: 30px 15px;
+  margin: 0 auto;
+}

@@ -1,11 +1,25 @@
-.container {
+.header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 20px 0;
     width: 100%;
-    background-color: aquamarine;
+    background-color: var(--color-lead);
 }
 
-.list__container {
-
+.list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.list__item:not(:last-child) {
+    margin-right: 20px;
 }
 .link {
-    color: aqua;
+    text-decoration: none;
+    color: var(--color-malibu);
+}
+.link.active {
+    color: var(--color-old-rose);
 }

@@ -32,7 +32,7 @@ const IrregularVerbs = () => {
     
     return (
         <>  
-            <div className={styles.wrapper}>
+            <div className='_wrapper'>
                 {
                     verb &&
                         <IrregularVerbsList

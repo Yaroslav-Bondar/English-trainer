@@ -9,11 +9,9 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
-      {/* <IrregularVerbs/> */}
         <BrowserRouter>
           <Header/>
           <main>
-            {/* <IrregularVerbs/> */}
             <Routes>
               {routesConfig.map((route, index) => 
                 <Route

@@ -3,7 +3,9 @@ import styles from './HomePage.module.css';
 
 const HomePage = () => {
     return (
-        <h1>HomePage page</h1>
+        <div className='_wrapper'>
+            <h1>Home Page</h1>
+        </div>
     );
 }
 
