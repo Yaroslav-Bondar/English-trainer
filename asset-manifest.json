@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/English-trainer/static/css/main.6411f10b.css",
+    "main.js": "/English-trainer/static/js/main.0bc78d78.js",
+    "static/js/787.ce61d668.chunk.js": "/English-trainer/static/js/787.ce61d668.chunk.js",
+    "index.html": "/English-trainer/index.html",
+    "main.6411f10b.css.map": "/English-trainer/static/css/main.6411f10b.css.map",
+    "main.0bc78d78.js.map": "/English-trainer/static/js/main.0bc78d78.js.map",
+    "787.ce61d668.chunk.js.map": "/English-trainer/static/js/787.ce61d668.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6411f10b.css",
+    "static/js/main.0bc78d78.js"
+  ]
+}
