@@ -26,7 +26,7 @@ const IrregularVerbsList = ({ verb,
     }
     return (
         <>
-            <h3 className = {styles.verb__title}>Irregular Verbs</h3>
+            <h3 className = {styles.verb__title}>Irregular Verbs Trainer</h3>
             <img className = {styles.verb__img} src={process.env.PUBLIC_URL + verbImagePath} alt="verb"/>
             <div className={styles.verb__native}>{verb[MAX_FORM_VERB]}</div>
             <form onSubmit={handleSubmit} className={styles.form}>

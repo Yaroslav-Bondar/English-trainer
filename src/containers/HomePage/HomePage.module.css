@@ -1,0 +1,9 @@
+.link {
+    color: var(--color-white);
+}
+.title {
+    margin-bottom: 20px;
+}
+.text{
+    margin-bottom: 40px;
+}

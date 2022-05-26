@@ -1,7 +1,7 @@
 .header {
     display: flex;
     align-items: center;
-    height: 100px;
+    height: var(--size-l);
     padding: 20px 0;
     width: 100%;
     background-color: var(--color-lead);
@@ -19,7 +19,8 @@
 .link {
     text-decoration: none;
     color: var(--color-malibu);
+    transition: color .2s;
 }
-.link.active {
+.list__item :global(a.active) {
     color: var(--color-old-rose);
 }

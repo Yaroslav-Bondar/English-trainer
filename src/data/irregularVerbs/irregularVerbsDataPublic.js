@@ -36,4 +36,26 @@ export const IRREGULAR_VERBS_DATA = [
         "строить",
         "/assets/img/irregularVerbs/build.jpg"
     ],
+    [
+        "buy",
+        "bought",
+        "bought",
+        "покупать",
+        "/assets/img/irregularVerbs/buy.jpg"
+    ],
+    [
+        "go",
+        "went",
+        "gone/been",
+        "идти",
+        "/assets/img/irregularVerbs/go.webp"
+
+    ],
+    [
+        "think",
+        "thought",
+        "thought",
+        "думать",
+        "/assets/img/irregularVerbs/think.jpg"
+    ],
 ]

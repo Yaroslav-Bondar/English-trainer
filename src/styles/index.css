@@ -6,6 +6,8 @@
   --font-size-l: calc(10px + 2vmin);
   --font-size-xl: calc(10px + 3vmin);
 
+  --size-l: calc(10vmin + 10px);
+
   --color-malibu: #61dafb;
   --color-shark: #282c34;
   --color-white: #fff;
