@@ -1,0 +1,13 @@
+.exercises {
+
+}
+.exercises__container {
+    display: flex;
+}
+.exercises__content {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 20px;
+}

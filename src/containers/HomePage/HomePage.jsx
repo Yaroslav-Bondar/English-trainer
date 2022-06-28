@@ -7,9 +7,7 @@ const HomePage = () => {
         <div className='_wrapper'>
             <h1 className={styles.title}>Home Page</h1>
             <p className={styles.text}>Here you can improve your English !</p>
-            <NavLink className={styles.link} to='grammar-trainers'>Grammar Trainers</NavLink>
-            
-
+            <NavLink className={styles.link} to='/exercises'>Exercises</NavLink>
         </div>
     );
 }

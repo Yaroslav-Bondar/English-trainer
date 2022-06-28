@@ -1,0 +1,10 @@
+.sidebar {
+
+}
+.sidebar__container {
+    position: relative;
+    top: -30px;
+    height: 100vw;
+    width: 200px;
+    background-color: rosybrown;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+// , Outlet
 import {NavLink} from 'react-router-dom';
 import styles from './Header.module.css';
 
@@ -9,22 +10,25 @@ const Header = () => {
                 <ul className={styles.list}>
                     <li className={styles.list__item}>
                         <NavLink 
-                            to="/" 
+                            to="/home" 
                             className={styles.link}
                         >
-                                Home
+                            Home
                         </NavLink>
                     </li>
                     <li className={styles.list__item}>
                         <NavLink 
                             className={styles.link} 
-                            to="/grammar-trainers"
+                            to="/exercises"
                         >
-                            Grammar Trainers
+                            Exercises
                         </NavLink>        
                     </li>
                 </ul>
             </nav>
+            {/* <main> */}
+                {/* <Outlet/> */}
+            {/* </main> */}
         </header>
     );
 }
