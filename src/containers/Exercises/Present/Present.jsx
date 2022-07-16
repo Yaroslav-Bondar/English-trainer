@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-// import styles from './Present.module.scss';
+import {Outlet} from 'react-router-dom';
 
 const Present = () => {
     return (
         <>
-        
+            <h1>Present</h1>
+            <Outlet />
         </>
     );
 }

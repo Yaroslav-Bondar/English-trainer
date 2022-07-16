@@ -1,40 +1,48 @@
-import {NavLink} from 'react-router-dom';
+// import {NavLink} from 'react-router-dom';
+import {useState} from 'react';
 import PropTypes from 'prop-types';
-import {exerciseRoutesConfig} from '../../routes/routesConfig';
+import SidebarItem from './SidebarItem';
+import items from '../../data/sidebar/exerciseSidebar.json';
+// import {exerciseRoutesConfig} from '../../routes/routesConfig';
+
+// close sidebar
+// /home/yaroslav/develop/web/apps/React/example/sidebar/deshboard-sidebar
+// https://github.com/miladsiddiquey/deshboard-sidebar/blob/main/src/components/Sidebar.jsx
+// https://www.youtube.com/watch?v=IathdVB65Lw&t=706s
+
+// dropdown sidebar
+// /home/yaroslav/develop/web/apps/React/example/sidebar/OshuvoO/dropdown-sidebar/react-sidebar/src
+// https://www.youtube.com/watch?v=sOhLV-lfgjs&t=1191s
 import styles from './Sidebar.module.css';
-// {children}
+
 const Sidebar = () => {
+    const [min, isMin] = useState(false);
+    const toggleMin = () => isMin(!min); 
     return (
-        <div className={styles.sidebar}>
-            <div className={styles.sidebar__container}>
-                {/* <div className={styles.sidebar}> */}
-                    <div className={styles.sidebar__top}>
-                        <h1 className={styles.sidebar__logo}>Logo</h1>
-                        <div className={styles.sidebar__bars}>
-                            {/* <FaBars/> */}
-                            
+        <aside className={styles.sidebar} role='complementary'>
+            <div className={min ? `${styles.sidebar__container} ${styles.sidebar__container_min}` : styles.sidebar__container}>
+                <div className={styles.sidebar__top}>
+                    <h1 className={min ? styles.sidebar__logo : `${styles.sidebar__logo} ${styles.sidebar__logo_active}`}>Logo</h1>
+                    <div className={min ? `${styles.sidebar__bars} ${styles.sidebar__bars_min}` : styles.sidebar__bars}>
+                        <div onClick={toggleMin} className={styles['sidebar__bars-item']}>
+
                         </div>
                     </div>
-                    {exerciseRoutesConfig.map(({path, icon, name}, index) => (
-                        <NavLink 
-                            to={path} 
-                            key={index} 
-                            className={styles.link}
-                            activeclassName={styles.link_active}
-                        >
-                            {/* <div className={styles.icon}>{icon}</div> */}
-                            <div className={styles.link__text}>{name}</div>
-                        </NavLink>
-                    ))}
-                {/* </div> */}
-                {/* <main>{children}</main> */}
-            </div>
-        </div>
+                </div>
+                <div className={styles.sidebar__menu}>
+                    {items.map((item, index) => <SidebarItem key={index} item={item} min={min}/>)}
+                </div>
+            </div> 
+        {/* </div> */}
+            {/* </div>  */}
+        </aside>
     );
 }
 
-Sidebar.propTypes = {
-    // children: PropTypes.object
-}
+// Sidebar.propTypes = {
+//     // children: PropTypes.object
+// } 
 
 export default Sidebar;
+
+        

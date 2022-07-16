@@ -26,9 +26,6 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
-            {/* <main> */}
-                {/* <Outlet/> */}
-            {/* </main> */}
         </header>
     );
 }

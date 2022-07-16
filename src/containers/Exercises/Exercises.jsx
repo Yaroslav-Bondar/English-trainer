@@ -1,8 +1,12 @@
-import {Routes, Route, Outlet, Link} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import PropTypes from 'prop-types';
-// import PresentSimplePositiveBe 
-//     from '../../components/Exercises/Present/presentSimple/presentSimplePositive/PresentSimplePositiveBe';
+import Present from './Present';
 import Sidebar from '../../components/Sidebar';
+import PresentSimplePositiveBe 
+    from '../../components/Exercises/Present/presentSimple/presentSimplePositive/PresentSimplePositiveBe';
+import PresentSimplePositive1 
+    from '../../components/Exercises/Present/presentSimple/presentSimplePositive/PresentSimplePositive1';
+import IrregularVerbs from './IrregularVerbs';
 
 import styles from './Exercises.module.css';
 
@@ -10,22 +14,36 @@ const Exercises = () => {
     return (
         <>
             <div className={styles.exercises__container}>
-                <nav>
+                <div className={styles.exercises__sidebar}>
                     <Sidebar/>
-                    {/* <Link to="present-simple-positive-be">present-simple-positive-be</Link> */}
-                </nav>
+                </div>
                 <div className={styles.exercises__content}>
                     <h1>Exercises</h1>
-                    {/* <Routes> */}
-                        {/* <Route element={Sidebar}></Route> */}
-                        {/* <Route  */}
-                            {/* path='/present-simple-positive-be'  */}
-                            {/* element={<PresentSimplePositiveBe/>}  */}
-                        {/* /> */}
-                    {/* </Routes> */}
-                    <div>
-                        <Outlet/>
-                    </div>
+                    {/* <div> */}
+                    <Routes>
+                        {/* <Route
+                            path='present/*'
+                            element={<Present/>}
+                        /> */}
+                        <Route
+                            path='present'
+                            element={<Present/>}
+                        >
+                            <Route 
+                                path='present-simple-positive-be' 
+                                element={<PresentSimplePositiveBe/>}
+                            />
+                            <Route 
+                                path='present-simple-positive-1' 
+                                element={<PresentSimplePositive1/>}
+                            /> 
+                        </Route>    
+                        <Route 
+                            path='irregular-verbs' 
+                            element={<IrregularVerbs/>}
+                        />
+                    </Routes>    
+                    {/* </div> */}
                 </div> 
             </div>
         </>

@@ -3,6 +3,7 @@
 @import url('./normalize.css');
 
 :root {
+  --font-size-m: calc(9px + 1vmin);
   --font-size-l: calc(10px + 2vmin);
   --font-size-xl: calc(10px + 3vmin);
 
@@ -18,6 +19,7 @@
   --color-shaft: #242424;
   --color-carbon: #2d2d2d;
   --color-old-rose: #ba776d;
+  --color-good-gray: #161616;
 
 }
 *,
@@ -32,6 +34,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px
+  var(--color-white);
 }
 
 code {

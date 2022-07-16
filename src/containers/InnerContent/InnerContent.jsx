@@ -4,9 +4,9 @@ import styles from './InnerContent.module.css';
 
 const InnerContent = () => {
     return (
-        <div className={styles[`inner-content__container`]}>
+        <main className={styles[`inner-content__container`]}>
             <Outlet/>
-        </div>
+        </main>
     );
 }
 

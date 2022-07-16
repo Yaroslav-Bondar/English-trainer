@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
-import IrregularVerbsList from '../../../components/IrregularVerbs/IrregularVerbsList';
+import IrregularVerbsList from '../../../components/Exercises/IrregularVerbs/IrregularVerbsList';
 import { getRandomNumber } from '../../../services/services';
 import { IRREGULAR_VERBS_DATA } from '../../../data/irregularVerbs/irregularVerbsData';
 import { MAX_FORM_VERB, VERB_IMAGE_INDEX } from '../../../constants/irregularVerbs';

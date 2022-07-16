@@ -4,6 +4,10 @@
 .exercises__container {
     display: flex;
 }
+.exercises__sidebar {
+    position: relative;
+    top: -30px;
+}
 .exercises__content {
     display: flex;
     flex-flow: column;

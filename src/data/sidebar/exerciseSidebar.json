@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Present",
+        "icon": "icon",
+        "childrens": [
+            {
+                "title": "present-simple-positive-be",
+                "icon": "icon",
+                "path": "present/present-simple-positive-be"
+            },
+            {
+                "title": "present-simple-positive-1",
+                "icon": "icon",
+                "path": "present/present-simple-positive-1"
+            }
+        ]
+    },
+    {
+        "title": "irregular-verbs",
+        "icon": "icon",
+        "path": "irregular-verbs"
+    }
+]
