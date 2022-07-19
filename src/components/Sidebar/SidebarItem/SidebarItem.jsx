@@ -3,18 +3,25 @@ import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './SidebarItem.module.css';
 
-const SidebarItem = ({item, min}) => {
+const SidebarItem = ({item, min, toggleMin}) => {
     const [open, setOpen] = useState(false);
-    console.log('min setItem ', min);
+    // console.log('min setItem ', min);
     console.log('open && !min ', open && !min);
 
     if(item.childrens) {
         return (
-            <div className={(open && !min) ? `${styles.sidebar__item} ${styles.sidebar__item_open}` : styles.sidebar__item}>
+            <div className={open && !min ? `${styles.sidebar__item} ${styles.sidebar__item_open}` : styles.sidebar__item}>
                 <div className={styles.sidebar__title}>
                     {/* <div> */}
                         {/* {item.icon} */}
-                        {item.icon && <i className={`${styles['sidebar__item-title-icon']}`}>Icon</i>}
+                        {item.icon && 
+                            <i 
+                                className={`${styles['sidebar__item-title-icon']}`}
+                                onClick={() => {if(min) {toggleMin(!min); setOpen(true)} }}
+                            >
+                                Icon
+                            </i>
+                        }
                         <span 
                             className={!min ? `${styles['sidebar__title-item']} ${styles['sidebar__title-item_active']}` : styles['sidebar__title-item']}
                         >

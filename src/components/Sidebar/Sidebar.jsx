@@ -16,21 +16,24 @@ import items from '../../data/sidebar/exerciseSidebar.json';
 import styles from './Sidebar.module.css';
 
 const Sidebar = () => {
-    const [min, isMin] = useState(false);
-    const toggleMin = () => isMin(!min); 
+    const [min, setMin] = useState(false);
+    const toggleMin = () => setMin(!min); 
     return (
         <aside className={styles.sidebar} role='complementary'>
             <div className={min ? `${styles.sidebar__container} ${styles.sidebar__container_min}` : styles.sidebar__container}>
                 <div className={styles.sidebar__top}>
                     <h1 className={min ? styles.sidebar__logo : `${styles.sidebar__logo} ${styles.sidebar__logo_active}`}>Logo</h1>
-                    <div className={min ? `${styles.sidebar__bars} ${styles.sidebar__bars_min}` : styles.sidebar__bars}>
-                        <div onClick={toggleMin} className={styles['sidebar__bars-item']}>
-
-                        </div>
+                    <div onClick={toggleMin} className={min ? `${styles.sidebar__bars} ${styles.sidebar__bars_min}` : styles.sidebar__bars}>
+                        <div  className={styles['sidebar__bars-item']}></div>
                     </div>
                 </div>
                 <div className={styles.sidebar__menu}>
-                    {items.map((item, index) => <SidebarItem key={index} item={item} min={min}/>)}
+                    {items.map((item, index) => <SidebarItem 
+                        key={index} 
+                        item={item} 
+                        min={min}
+                        toggleMin={toggleMin}
+                    />)}
                 </div>
             </div> 
         {/* </div> */}
