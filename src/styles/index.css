@@ -3,12 +3,13 @@
 @import url('./normalize.css');
 
 :root {
+  /* font */
   --font-size-m: calc(9px + 1vmin);
   --font-size-l: calc(10px + 2vmin);
   --font-size-xl: calc(10px + 3vmin);
-
+  /* size */
   --size-l: calc(10vmin + 10px);
-
+  /* colors */
   --color-malibu: #61dafb;
   --color-shark: #282c34;
   --color-white: #fff;
@@ -20,12 +21,6 @@
   --color-carbon: #2d2d2d;
   --color-old-rose: #ba776d;
   --color-good-gray: #161616;
-
-}
-*,
-::after, 
-::before  {
-    box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -37,20 +32,18 @@ body {
   font-size: 16px
   var(--color-white);
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 ._container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   padding: 0 15px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 ._container_grow {
   flex-grow: 1;
 }
-
 ._wrapper {
   max-width: 1000px;
   padding: 30px 15px;
