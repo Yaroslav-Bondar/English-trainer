@@ -3,7 +3,6 @@
     align-items: center;
     height: var(--size-l);
     padding: 20px 0;
-    width: 100%;
     background-color: var(--color-good-gray);
 }
 

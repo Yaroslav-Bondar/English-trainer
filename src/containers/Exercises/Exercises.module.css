@@ -12,6 +12,6 @@
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    width: 100%;
+    flex-basis: 100%;
     padding-left: 20px;
 }

@@ -1,7 +1,8 @@
 /* reset styles */
 /* @import-normalize; */
 @import url('./normalize.css');
-
+/* import bootstrap icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 :root {
   /* font */
   --font-size-m: calc(9px + 1vmin);
@@ -49,3 +50,207 @@ code {
   padding: 30px 15px;
   margin: 0 auto;
 }
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.arrow-down-empty {
+  width: 0.5em;
+  height: 0.5em;
+  border-right: 0.1em solid;
+  border-top: 0.1em solid;
+  transform: rotate(135deg);
+}
+
+/* .folder {
+  --color: #ffc843;
+  --color-semi-dark: #dead3a;
+  --color-dark: #b88f30;
+  --border-radius: 0.06em;
+  --label-size: 0.1em;
+  --width: 1.2em;
+  --height: 0.91em;
+  --margin: 0.1em;
+  position: relative;
+  width: 0.35em;
+  box-sizing: content-box;
+  border-right: 0.08em solid transparent;
+  border-bottom: var(--label-size) solid var(--color-dark);
+  margin-bottom: calc(var(--height) + var(--margin));
+  margin-right: calc((var(--width) - (0.35em + var(--label-size) + 0.08em - var(--border-radius))) +
+			var(--margin));
+  margin-left: calc((var(--border-radius) + 0.15em) + var(--margin));
+  margin-top: var(--margin);
+} */
+.folder__container {
+  --color: #ffc843;
+  --color-semi-dark: #dead3a;
+  --color-dark: #b88f30;
+  --border-radius: 0.06em;
+  --label-size: 0.1em;
+  --width: 1.2em;
+  --height: 0.91em;
+  --margin: 0.1em;
+  position: relative;
+  width: 0.35em;
+  box-sizing: content-box;
+  border-right: 0.08em solid transparent;
+  border-bottom: var(--label-size) solid var(--color-dark);
+  margin-bottom: calc(var(--height) + var(--margin));
+  margin-right: calc((var(--width) - (0.35em + var(--label-size) + 0.08em - var(--border-radius))) +
+			var(--margin));
+  margin-left: calc((var(--border-radius) + 0.15em) + var(--margin));
+  margin-top: var(--margin);
+}
+.folder__container_open {
+
+}
+/* .folder::after {
+  content: "";
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 0.02em 0 rgba(0, 0, 0, 0.2);
+  background: radial-gradient(circle at top left, var(--color), var(--color) 80%, var(--color-semi-dark) 81%);
+  position: absolute;
+  top: var(--label-size);
+  left: calc(var(--border-radius) * -1);
+  z-index: 2;
+} */
+.folder__frontside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 0.02em 0 rgba(0, 0, 0, 0.2);
+  background: radial-gradient(circle at top left, var(--color), var(--color) 80%, var(--color-semi-dark) 81%);
+  position: absolute;
+  top: var(--label-size);
+  left: calc(var(--border-radius) * -1);
+  z-index: 2;
+}
+/* .folder::before {
+  content: "";
+  border-radius: var(--border-radius);
+  background: var(--color-dark);
+  top: var(--label-size);
+  left: calc(var(--border-radius) * -1);
+  position: absolute;
+  height: var(--height);
+  width: var(--width);
+} */
+.folder__backside {
+  border-radius: var(--border-radius);
+  background: var(--color-dark);
+  top: var(--label-size);
+  left: calc(var(--border-radius) * -1);
+  position: absolute;
+  height: var(--height);
+  width: var(--width);
+}
+/* .folder:empty::after {
+  --border-width: 0.015em;
+  border-top: var(--border-width) solid var(--color-dark);
+} */
+/* .folder__container:empty .folder__frontside {
+  --border-width: 0.015em;
+  border-top: var(--border-width) solid var(--color-dark);
+} */
+/* .folder__container */
+.folder__frontside {
+  --border-width: 0.015em;
+  border-top: var(--border-width) solid var(--color-dark);
+}
+/* .folder:not(:empty)::after {
+  transform: skew(10deg) scaleY(0.8);
+  left: calc(var(--border-radius) * -1 - 0.08em);
+  top: calc(var(--label-size) + var(--label-size) * 0.8);
+} */
+/* .folder__container:not(:empty) .folder__frontside {
+  transform: skew(10deg) scaleY(0.8);
+  left: calc(var(--border-radius) * -1 - 0.08em);
+  top: calc(var(--label-size) + var(--label-size) * 0.8);
+} */
+.folder__container_open .folder__frontside {
+  transform: skew(10deg) scaleY(0.8);
+  left: calc(var(--border-radius) * -1 - 0.08em);
+  top: calc(var(--label-size) + var(--label-size) * 0.8);
+}
+/* .folder .file {
+  --skew: skew(5deg);
+  position: absolute;
+  width: var(--width);
+  height: var(--height);
+  top: var(--label-size);
+  background: #fff;
+  box-shadow: 0 0 0.05em 0 rgba(0, 0, 0, 0.2);
+} */
+.folder__file {
+  display: none;
+  --skew: skew(5deg);
+  position: absolute;
+  width: var(--width);
+  height: var(--height);
+  top: var(--label-size);
+  background: #fff;
+  box-shadow: 0 0 0.05em 0 rgba(0, 0, 0, 0.2);
+}
+.folder__container_open .folder__file {
+  display: block;
+}
+.folder__icon {
+  font-size: .7em;
+  color: chocolate;
+}
+.folder__icon::before {
+
+}
+/* .folder .file:nth-child(1) {
+  transform: scale(0.9, 0.9) var(--skew);
+  left: calc((var(--border-radius) * -1));
+} */
+.folder__file:nth-child(1) {
+  transform: scale(0.9, 0.9) var(--skew);
+  left: calc((var(--border-radius) * -1));
+  /* background-color: linear-gradient(90deg, green, yellow, blue); */
+}
+/* .folder .file:nth-child(1):last-child {
+  transform: scale(0.9, 0.8) var(--skew);
+} */
+.folder__file:nth-child(1):last-child {
+  transform: scale(0.9, 0.8) var(--skew);
+}
+/* .folder .file:nth-child(2) {
+  transform: scale(0.9, 0.8) var(--skew);
+  left: calc((var(--border-radius) * -2));
+} */
+.folder__file:nth-child(2) {
+  transform: scale(0.9, 0.8) var(--skew);
+  left: calc((var(--border-radius) * -2));
+  /* background-image: linear-gradient(90deg, green, yellow, blue); */
+
+}
+/* .folder .file:nth-child(2):last-child {
+  transform: scale(0.9, 0.75) var(--skew);
+} */
+.folder__file:nth-child(2):last-child {
+  transform: scale(0.9, 0.75) var(--skew);
+}
+/* .folder .file:nth-child(3) {
+  transform: scale(0.9, 0.7) var(--skew);
+  left: calc((var(--border-radius) * -3));
+} */
+.folder__file:nth-child(3) {
+  transform: scale(0.9, 0.7) var(--skew);
+  left: calc((var(--border-radius) * -3));
+}
+/* .folder .file:nth-child(n + 4) {
+  display: none;
+} */
+.folder__file:nth-child(n + 4) {
+  display: none;
+}
+

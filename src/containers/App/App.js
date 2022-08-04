@@ -3,12 +3,12 @@ import Header from '../../components/Header';
 import InnerContent from '../InnerContent';
 import {mainRoutesConfig} from '../../routes/routesConfig';
 // import logo from '../../logo.svg';
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-header">
+    <div className={styles.app}>
+      <div className={styles.app__container}>
         <BrowserRouter>
           <Header/>
             <Routes>

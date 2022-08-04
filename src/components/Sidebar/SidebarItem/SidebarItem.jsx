@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { FaBeer } from 'react-icons/fa';
 import styles from './SidebarItem.module.css';
 
 const SidebarItem = ({item, min, toggleMin}) => {
@@ -11,30 +12,32 @@ const SidebarItem = ({item, min, toggleMin}) => {
     if(item.childrens) {
         return (
             <div className={open && !min ? `${styles.sidebar__item} ${styles.sidebar__item_open}` : styles.sidebar__item}>
-                <div className={styles.sidebar__title}>
-                    {/* <div> */}
-                        {/* {item.icon} */}
-                        {item.icon && 
-                            <i 
-                                className={`${styles['sidebar__item-title-icon']}`}
-                                onClick={() => {if(min) {toggleMin(!min); setOpen(true)} }}
-                            >
-                                Icon
-                            </i>
-                        }
+                <div onClick={() => setOpen(!open)} className={styles.sidebar__title}>
+                    <div className={styles['sidebar__title-container']}>
+                        <div 
+                            className={`${styles['sidebar__item-title-icon']} folder`}
+                            onClick={() => {if(min) {toggleMin(!min); setOpen(true)} }}
+                        >
+                            <div className={open ? "folder__container folder__container_open" : "folder__container"}>
+                                <div className="folder__backside"></div>
+                                <div className="folder__file-container">
+                                    <div className="folder__file"></div>
+                                    <div className="folder__file"></div>
+                                    <div className="folder__file"></div>
+                                    <div className="folder__file"></div>
+                                    <div className="folder__file"></div>
+                                </div>
+                                <div className="folder__frontside">
+                                    {item.icon && <div class="folder__icon bi-github"></div>}
+                                </div>
+                            </div>
+                        </div>
                         <span 
                             className={!min ? `${styles['sidebar__title-item']} ${styles['sidebar__title-item_active']}` : styles['sidebar__title-item']}
                         >
                             {item.title}
                         </span>
-                    {/* </div> */}
-                    {/* `${bi-chevron-down}  */}
-                    <i 
-                        className={!min ? `${styles['sidebar__toggle-btn']} ${styles['sidebar__toggle-btn_active']}` : styles['sidebar__toggle-btn']} 
-                        onClick={() => setOpen(!open)}
-                    >
-                        icon
-                    </i>
+                    </div>
                 </div>
                 <div className={styles.sidebar__content}>
                     {item.childrens.map((child, index) => <SidebarItem item={child} key={index} min={min}/>)}
