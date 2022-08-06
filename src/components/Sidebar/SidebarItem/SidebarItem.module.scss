@@ -1,0 +1,138 @@
+.sidebar {
+    &__item {
+        display: block;
+        &_open {
+            // display: none;
+        }
+        // open submenu
+        &_open .sidebar__content {
+            height: auto;
+        }
+        &:hover{
+            background-color: rgba(255, 255, 255, .1);
+        }
+        &_plain {
+            display: flex;
+            align-items: center;
+            color: var(--color-white);
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }           
+        }
+    }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(239, 18, 18);
+        font-size: 1.2em;
+        &-icon {
+            margin-right: 0.5em;
+        }
+        &-item {
+            display: none;
+            margin-top: 0.2em;
+            &_active {
+                display: block;
+            }    
+        }
+        &-container {
+            display: flex;
+        }
+    }
+    &__content {
+        padding-top: .25em;
+        height: 0;
+        overflow: hidden;
+    }
+    &__plain {
+        &-icon {
+            color: blueviolet;
+        }
+        &-title {
+            display: none;
+            &_active {
+                display: block;
+            }
+        }
+    }
+}
+// .sidebar__item_open {
+//     display: none;
+// }
+// .sidebar__item {
+//     display: block;
+// }
+// .sidebar__item:hover{
+//     background-color: rgba(255, 255, 255, .1);
+// }
+// .sidebar__item_open .sidebar__content {
+//     height: auto;
+// }
+/* .sidebar__item_open .sidebar__toggle-btn {
+    transform: rotate(315deg);
+} */
+/* .sidebar__item_open .sidebar__file {
+    display: block;
+} */
+// .sidebar__title {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     color: rgb(239, 18, 18);
+//     font-size: 1.2em;
+//     &-item {
+//         display: none;
+//         margin-top: 0.2em;
+//         &_active {
+//             display: block;
+//         }    
+//     }
+//     &-container {
+//         display: flex;
+//     }
+// }
+// .sidebar__title-item {
+//     display: none;
+//     margin-top: 0.2em;
+// }
+/* .sidebar__file {
+    display: none;
+} */
+// .sidebar__title-container {
+//     display: flex;
+// }
+// .sidebar__title-item_active {
+//     display: block;
+// }
+// .sidebar__item_plain {
+//     color: var(--color-white);
+//     text-decoration: none;
+// }
+// .sidebar__item_plain:hover {
+//     text-decoration: underline;
+// }
+/* .sidebar__toggle-btn {
+    display: none;
+    border-color: var(--color-white);
+    transition: transform .2s;
+}
+.sidebar__toggle-btn_active {
+    display: block;
+} */
+// .sidebar__item-title-icon {
+//     margin-right: 0.5em;
+// }
+// .sidebar__item-plain-icon {
+//     color: blueviolet;
+// }
+// .sidebar__item-title-plain {
+//     display: none;
+// }
+// .sidebar__item-title-plain {
+//     display: none;
+// }
+// -title-plain {
+//     display: none;
+// }
