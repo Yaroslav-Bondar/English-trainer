@@ -1,0 +1,97 @@
+.folder {
+    &__container {
+        --color: #ffc843;
+        --color-semi-dark: #dead3a;
+        --color-dark: #b88f30;
+        --border-radius: 0.06em;
+        --label-size: 0.1em;
+        --width: 1.2em;
+        --height: 0.91em;
+        --margin: 0.1em;
+        position: relative;
+        width: 0.35em;
+        box-sizing: content-box;
+        border-right: 0.08em solid transparent;
+        border-bottom: var(--label-size) solid var(--color-dark);
+        margin-bottom: calc(var(--height) + var(--margin));
+        margin-right: calc((var(--width) - (0.35em + var(--label-size) + 0.08em - var(--border-radius))) +
+                  var(--margin));
+        margin-left: calc((var(--border-radius) + 0.15em) + var(--margin));
+        margin-top: var(--margin);
+        /* opening the front cover of the folder */
+        &_open .folder__frontside {
+            transform: skew(10deg) scaleY(0.8);
+            left: calc(var(--border-radius) * -1 - 0.08em);
+            top: calc(var(--label-size) + var(--label-size) * 0.8);
+        }
+        // show/hide file 
+        &_open .folder__file {
+            display: block;
+        }
+    }
+    &__frontside {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--width);
+        height: var(--height);
+        border-radius: var(--border-radius);
+        box-shadow: 0 0 0.02em 0 rgba(0, 0, 0, 0.2);
+        background: radial-gradient(circle at top left, var(--color), var(--color) 80%, var(--color-semi-dark) 81%);
+        position: absolute;
+        top: var(--label-size);
+        left: calc(var(--border-radius) * -1);
+        z-index: 2;
+        --border-width: 0.015em;
+        border-top: var(--border-width) solid var(--color-dark);
+
+    }
+    // &__frontside {
+    //     --border-width: 0.015em;
+    //     border-top: var(--border-width) solid var(--color-dark);
+    //   }
+    &__backside {
+        border-radius: var(--border-radius);
+        background: var(--color-dark);
+        top: var(--label-size);
+        left: calc(var(--border-radius) * -1);
+        position: absolute;
+        height: var(--height);
+        width: var(--width);
+    }
+    &__file {
+        display: none;
+        --skew: skew(5deg);
+        position: absolute;
+        width: var(--width);
+        height: var(--height);
+        top: var(--label-size);
+        background: #fff;
+        box-shadow: 0 0 0.05em 0 rgba(0, 0, 0, 0.2);
+        &:nth-child(1) {
+            transform: scale(0.9, 0.9) var(--skew);
+            left: calc((var(--border-radius) * -1));
+        }
+        &:nth-child(1):last-child {
+            transform: scale(0.9, 0.8) var(--skew);
+        }
+        &:nth-child(2) {
+            transform: scale(0.9, 0.8) var(--skew);
+            left: calc((var(--border-radius) * -2));
+        }
+        &:nth-child(2):last-child {
+            transform: scale(0.9, 0.75) var(--skew);
+        }
+        &:nth-child(3) {
+            transform: scale(0.9, 0.7) var(--skew);
+            left: calc((var(--border-radius) * -3));
+        }
+        &:nth-child(n + 4) {
+            display: none;
+        }
+    }
+    &__icon {
+        font-size: .7em;
+        color: var(--color-good-gray);
+    }
+}

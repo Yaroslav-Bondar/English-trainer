@@ -1,8 +1,9 @@
 .header {
     display: flex;
     align-items: center;
-    height: var(--size-l);
-    padding: 20px 0;
+    /* height: var(--size-l); */
+    /* padding: 20px 0; */
+    padding: 1.2em 0;
     background-color: var(--color-good-gray);
 }
 
