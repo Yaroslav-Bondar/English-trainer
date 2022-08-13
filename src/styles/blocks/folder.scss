@@ -46,10 +46,6 @@
         border-top: var(--border-width) solid var(--color-dark);
 
     }
-    // &__frontside {
-    //     --border-width: 0.015em;
-    //     border-top: var(--border-width) solid var(--color-dark);
-    //   }
     &__backside {
         border-radius: var(--border-radius);
         background: var(--color-dark);
@@ -92,6 +88,7 @@
     }
     &__icon {
         font-size: .7em;
+        line-height: 0;
         color: var(--color-good-gray);
     }
 }

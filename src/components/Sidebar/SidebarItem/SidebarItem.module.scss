@@ -54,6 +54,9 @@
         &-icon {
             margin: 0 .65em 0 .38em;
             color: var(--color-bright-sun);
+            &_center {
+                margin: 0 auto;
+            }
         }
         &-title {
 
