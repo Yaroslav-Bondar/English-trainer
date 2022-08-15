@@ -16,6 +16,7 @@ import items from '../../data/sidebar/exerciseSidebar.json';
 import styles from './Sidebar.module.scss';
 
 const Sidebar = () => {
+    // rolled up or open sidebar
     const [min, setMin] = useState(false);
     const toggleMin = () => setMin(!min); 
     return (
@@ -29,6 +30,7 @@ const Sidebar = () => {
                 </div>
                 <div className={styles.sidebar__menu}>
                     {items.map((item, index) => <SidebarItem 
+                        data-name='SidebarItem'
                         key={index} 
                         item={item} 
                         min={min}
@@ -36,8 +38,6 @@ const Sidebar = () => {
                     />)}
                 </div>
             </div> 
-        {/* </div> */}
-            {/* </div>  */}
         </aside>
     );
 }

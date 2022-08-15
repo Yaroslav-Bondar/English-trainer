@@ -1,10 +1,11 @@
 import {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Tooltip from '../../UI/UITooltip';
 import classNames from 'classnames/bind';
 import styles from './SidebarItem.module.scss';
 
-const SidebarItem = ({item, min, toggleMin}) => {
+const SidebarItem = ({item, min, toggleMin, ...rest}) => {
     // show/hide submenu
     const [open, setOpen] = useState(false);
     // open submenu and minified sidebar
@@ -23,7 +24,6 @@ const SidebarItem = ({item, min, toggleMin}) => {
         const titleItemClass = st({
             'sidebar__title-item': true,
             'sidebar__title-item_active': !min,
-
         });
         const contentClass = st({
             'sidebar__content': true,
@@ -71,14 +71,16 @@ const SidebarItem = ({item, min, toggleMin}) => {
             'sidebar__plain-title_active': !min,
         });
         return (
-            <NavLink to={item.path || '#'} className={st(itemClass)}>
-                {item.icon &&
-                    <div className={plainIconClass}></div>
-                }
-                <div className={plainTitleClass}>
-                    {item.title}
-                </div>
-            </NavLink>
+            <Tooltip style={{color: 'blue'}}>
+                <NavLink to={item.path || '#'} className={st(itemClass)}>
+                    {item.icon &&
+                        <div className={plainIconClass}></div>
+                    }
+                    <div className={plainTitleClass}>
+                        {item.title}
+                    </div>
+                </NavLink>
+            </Tooltip>
         )
     }
 }
