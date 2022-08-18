@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import './UITooltip.module.scss';
+import classNames from 'classnames/bind';
+import styles from './UITooltip.module.scss';
 
 class Tooltip extends Component {
     static propTypes = {
@@ -28,24 +28,25 @@ class Tooltip extends Component {
         this.setState({visible});
     }
     render() {
-        const visible = this.state;
+        const {visible} = this.state;
         const {children, content, style, position} = this.props;
-        const classes = classNames(
-            'tooltip',
-            position,
+        const st = classNames.bind(styles);
+        const itemClasses = st(
+            'tooltip__item',
+            'tooltip__item_position_' + position,
         );
         return (
-            <span className='tolltipWrapper'>
-                {visible && <span style={style} className={classes}>{content}</span>}
-                <span
-                    className='targetElement'
+            <div className={st('tooltip')}>
+                {visible && <div style={style} className={itemClasses}>{content}</div>}
+                <div
+                    className={st('tooltip__target')}
                     onMouseEnter={this.show}
                     onMouseLeave={this.hide} 
                 >
                     {children}
-                </span>
-            </span>
-        );
+                </div>
+            </div>
+        )
     }
 }
 

@@ -2,6 +2,7 @@
     &__item {
         display: block;
         padding: .5em .6em;
+        cursor: pointer;
         &:hover{
             background-color: rgba(255, 255, 255, .1);
         }
@@ -20,8 +21,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // color: rgb(239, 18, 18);
-        // font-size: .8em;
         &-icon {
             display: flex;
             align-items: center;
@@ -59,7 +58,6 @@
             }
         }
         &-title {
-
             display: none;
             &_active {
                 display: block;
