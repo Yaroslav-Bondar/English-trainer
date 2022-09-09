@@ -5,13 +5,14 @@
     display: flex;
 }
 .exercises__sidebar {
-    position: relative;
-    top: -30px;
+    position: fixed;
+    top: 3.55em;
+    bottom: 0;
 }
 .exercises__content {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
     flex-basis: 100%;
-    padding-left: 20px;
+    padding-left: 5.5em;
 }

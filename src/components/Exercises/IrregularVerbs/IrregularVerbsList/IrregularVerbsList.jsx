@@ -12,6 +12,7 @@ const IrregularVerbsList = ({ verb,
     const [inputValue, setInputValue] = useState('');
     const [answer, setAnswer] = useState(null);
     const [img, setImg] = useState(null);
+    
     function handleSubmit(event) {
         event.preventDefault();
         let delay = 1000;
@@ -24,6 +25,7 @@ const IrregularVerbsList = ({ verb,
             setAnswer(null);
         }, delay);
     }
+    
     return (
         <>
             <h3 className = {styles.verb__title}>Irregular Verbs Trainer</h3>

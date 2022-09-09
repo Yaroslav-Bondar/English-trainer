@@ -10,9 +10,10 @@ const IrregularVerbs = () => {
     const [verb, setVerb] = useState();
     const [verbForm, setVerbForm] = useState();
     const [verbImagePath, setVerbImagePath] = useState();
-  
+    
+    const maxValue = IRREGULAR_VERBS_DATA.length;
+
     function getRandomVerb() {
-        const maxValue = IRREGULAR_VERBS_DATA.length;
         const randomNumber = getRandomNumber(maxValue);
         const randomForm = getRandomNumber(MAX_FORM_VERB);
         const randomVerbData = IRREGULAR_VERBS_DATA[randomNumber];

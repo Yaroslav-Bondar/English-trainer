@@ -1,13 +1,13 @@
 import React from 'react';
 import { MAX_FORM_VERB } from '../../../../constants/irregularVerbs';
 import styles from './InputVerb.module.css';
+
 class InputVerb extends React.Component {
     constructor() {
         super();
         this.handleInput = this.handleInput.bind(this);
         this.inputElement = React.createRef();
     }
-    
     handleInput(event) {
         this.props.setInputValue(event.target.value);
     }
@@ -23,6 +23,7 @@ class InputVerb extends React.Component {
 
     render() {
         const {answer, inputValue, verb, verbForm} = this.props;
+    // console.log('verb from InputVerb', verb);
         return (
             <>  
                 <div className={styles['input-container']}>

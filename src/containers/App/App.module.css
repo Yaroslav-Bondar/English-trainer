@@ -1,17 +1,10 @@
 .app {
-  /* text-align: center; */
-}
-
-.app__container {
-  background-color: var(--color-shark);
-  /* #282c34; */
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
+  min-height: 100vh;
   font-size: var(--font-size-m);
   color: var(--color-white);
+  background-color: var(--color-shark);
 }
 
 /* @keyframes App-logo-spin {
