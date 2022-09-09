@@ -1,5 +1,5 @@
 import React from 'react';
-import { MAX_FORM_VERB } from '../../../../constants/irregularVerbs';
+import { MAX_FORM_VERB } from '@constants/irregularVerbs';
 import styles from './InputVerb.module.css';
 
 class InputVerb extends React.Component {
