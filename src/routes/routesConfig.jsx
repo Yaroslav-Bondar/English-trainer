@@ -1,15 +1,41 @@
 import HomePage from '../containers/HomePage';
-import IrregularVerbs from '../containers/IrregularVerbs';
+import Exercises from '../containers/Exercises';
 
-const routesConfig = [
+export const mainRoutesConfig = [
     {
-        path: '/',
+        path: 'home',
         element: <HomePage/>
     },
     {
-        path: 'grammar-trainers',
-        element: <IrregularVerbs/>
+        path: 'exercises/*',
+        element: <Exercises/>
     },
 ];
 
-export {routesConfig as default};
+// export {routesConfig as default};
+
+// export const exerciseRoutesConfig = [
+//     {
+//         path:"present",
+//         name:"present",
+//         // icon:<FaTh/>
+//     },
+//     {
+//         path:"irregular-verbs",
+//         name:"irregular-verbs",
+//         // icon:<FaTh/>
+//     },
+//     // {
+//     //     path:"present-simple-positive-be",
+//     //     name:"present-simple-positive-be",
+//     //     // element: 
+//     //     // icon:<FaTh/>
+//     // },
+//     // {
+//     //     path:"present-simple-positive-1",
+//     //     name:"present-simple-positive-1",
+//     //     // icon:<FaTh/>
+//     // },
+// ]
+
+// export const exerciseElementRoutesConfig = 

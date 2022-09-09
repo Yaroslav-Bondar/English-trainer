@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import InputVerb from '../InputVerb';
-import { checkAnswer } from '../../../services/services';
-import { CHECK_INPUT_IRREGULAR_VERB, MAX_FORM_VERB } from '../../../constants/irregularVerbs';
+import { checkAnswer } from '../../../../services/services';
+import { CHECK_INPUT_IRREGULAR_VERB, MAX_FORM_VERB } from '../../../../constants/irregularVerbs';
 import styles from './IrregularVerbsList.module.css';
 
 const IrregularVerbsList = ({ verb,
@@ -12,6 +12,7 @@ const IrregularVerbsList = ({ verb,
     const [inputValue, setInputValue] = useState('');
     const [answer, setAnswer] = useState(null);
     const [img, setImg] = useState(null);
+    
     function handleSubmit(event) {
         event.preventDefault();
         let delay = 1000;
@@ -24,6 +25,7 @@ const IrregularVerbsList = ({ verb,
             setAnswer(null);
         }, delay);
     }
+    
     return (
         <>
             <h3 className = {styles.verb__title}>Irregular Verbs Trainer</h3>

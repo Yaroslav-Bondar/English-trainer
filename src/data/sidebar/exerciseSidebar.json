@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Present",
+        "icon": "bi bi-3-circle",
+        "childrens": [
+            {
+                "title": "present-simple-positive-be",
+                "icon": "bi bi-peace",
+                "path": "present/present-simple-positive-be",
+                "childrens": [
+                    {
+                        "title": "present-simple-positive-1",
+                        "icon": "bi bi-peace",
+                        "path": "present/present-simple-positive-1"
+                    }       
+                ] 
+            },
+            {
+                "title": "present-simple-positive-1",
+                "icon": "bi bi-flower1",
+                "path": "present/present-simple-positive-1"
+            }
+        ]
+    },
+    {
+        "title": "irregular-verbs",
+        "icon": "bi bi-kanban",
+        "path": "irregular-verbs"
+    }
+]

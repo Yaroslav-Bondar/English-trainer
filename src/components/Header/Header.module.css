@@ -1,10 +1,12 @@
 .header {
+    position: fixed;
     display: flex;
     align-items: center;
-    height: var(--size-l);
-    padding: 20px 0;
     width: 100%;
-    background-color: var(--color-lead);
+    /* height: var(--size-l); */
+    /* padding: 20px 0; */
+    padding: 1.2em 0;
+    background-color: var(--color-good-gray);
 }
 
 .list {

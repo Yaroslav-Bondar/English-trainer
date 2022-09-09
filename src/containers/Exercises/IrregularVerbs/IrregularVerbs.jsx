@@ -1,18 +1,19 @@
 import { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
-import IrregularVerbsList from '../../components/IrregularVerbs/IrregularVerbsList';
-import { getRandomNumber } from '../../services/services';
-import { IRREGULAR_VERBS_DATA } from '../../data/irregularVerbs/irregularVerbsData';
-import { MAX_FORM_VERB, VERB_IMAGE_INDEX } from '../../constants/irregularVerbs';
+import IrregularVerbsList from '../../../components/Exercises/IrregularVerbs/IrregularVerbsList';
+import { getRandomNumber } from '../../../services/services';
+import { IRREGULAR_VERBS_DATA } from '../../../data/irregularVerbs/irregularVerbsData';
+import { MAX_FORM_VERB, VERB_IMAGE_INDEX } from '../../../constants/irregularVerbs';
 import styles from './IrregularVerbs.module.css';
 
 const IrregularVerbs = () => {
     const [verb, setVerb] = useState();
     const [verbForm, setVerbForm] = useState();
     const [verbImagePath, setVerbImagePath] = useState();
-  
+    
+    const maxValue = IRREGULAR_VERBS_DATA.length;
+
     function getRandomVerb() {
-        const maxValue = IRREGULAR_VERBS_DATA.length;
         const randomNumber = getRandomNumber(maxValue);
         const randomForm = getRandomNumber(MAX_FORM_VERB);
         const randomVerbData = IRREGULAR_VERBS_DATA[randomNumber];
