@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import InputVerb from '../InputVerb';
-import { checkAnswer } from '../../../../services/services';
-import { CHECK_INPUT_IRREGULAR_VERB, MAX_FORM_VERB } from '../../../../constants/irregularVerbs';
+import InputVerb from '@components/Exercises/IrregularVerbs/InputVerb';
+import { checkAnswer } from '@services/common';
+import { CHECK_INPUT_IRREGULAR_VERB, MAX_FORM_VERB } from '@constants/irregularVerbs';
 import styles from './IrregularVerbsList.module.css';
 
 const IrregularVerbsList = ({ verb,

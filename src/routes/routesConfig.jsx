@@ -1,5 +1,5 @@
-import HomePage from '../containers/HomePage';
-import Exercises from '../containers/Exercises';
+import HomePage from '@containers/HomePage';
+import Exercises from '@containers/Exercises';
 
 export const mainRoutesConfig = [
     {

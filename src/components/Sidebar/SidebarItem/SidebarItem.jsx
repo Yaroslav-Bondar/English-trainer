@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Tooltip from '../../UI/UITooltip';
+import Tooltip from '@ui/UITooltip';
 import classNames from 'classnames/bind';
 import styles from './SidebarItem.module.scss';
 

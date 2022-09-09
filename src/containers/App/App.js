@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Header from '../../components/Header';
-import InnerContent from '../InnerContent';
-import {mainRoutesConfig} from '../../routes/routesConfig';
+import Header from '@components/Header';
+import InnerContent from '@containers/InnerContent';
+import {mainRoutesConfig} from '@routes/routesConfig';
 // import logo from '../../logo.svg';
 import styles from './App.module.css';
 

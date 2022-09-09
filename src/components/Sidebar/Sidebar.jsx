@@ -2,7 +2,7 @@
 import {useState} from 'react';
 import PropTypes from 'prop-types';
 import SidebarItem from './SidebarItem';
-import items from '../../data/sidebar/exerciseSidebar.json';
+import items from '@data/sidebar/exerciseSidebar.json';
 // import {exerciseRoutesConfig} from '../../routes/routesConfig';
 
 // close sidebar
