@@ -1,7 +1,7 @@
 import {INCREMENT_CORRECT_IRREGULAR_VERB_ANSWERS} from '@store/constants/actionTypes';
 
-export addCorrectIrregularVerbAnswer = verb => (
+export addCorrectIrregularVerbAnswer = () => (
     {
-        action.type: INCREMENT_CORRECT_IRREGULAR_VERB_ANSWERS,
+        type: INCREMENT_CORRECT_IRREGULAR_VERB_ANSWERS,
     }
 )

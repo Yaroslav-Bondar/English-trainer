@@ -12,7 +12,7 @@ const IrregularVerbsList = ({ verb,
     const [inputValue, setInputValue] = useState('');
     const [answer, setAnswer] = useState(null);
     const [img, setImg] = useState(null);
-    
+    console.log('verb from IrregularVerbsList', verb);
     function handleSubmit(event) {
         event.preventDefault();
         let delay = 1000;
