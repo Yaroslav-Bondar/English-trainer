@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
+import {useDispatch} from 'react-redux';
 import PropTypes from 'prop-types';
 import InputVerb from '@components/Exercises/IrregularVerbs/InputVerb';
+import {incrementCorrectIrregularVerb,
+        addIncorrectIrregularVerb} from '@store/actions';
 import { checkAnswer } from '@services/common';
 import { CHECK_INPUT_IRREGULAR_VERB, MAX_FORM_VERB } from '@constants/irregularVerbs';
 import styles from './IrregularVerbsList.module.css';
@@ -12,13 +15,20 @@ const IrregularVerbsList = ({ verb,
     const [inputValue, setInputValue] = useState('');
     const [answer, setAnswer] = useState(null);
     const [img, setImg] = useState(null);
-    console.log('verb from IrregularVerbsList', verb);
+    const dispatch = useDispatch();
+
+    // console.log('verb from IrregularVerbsList', verb);
     function handleSubmit(event) {
         event.preventDefault();
         let delay = 1000;
         const checkedAnswer = checkAnswer(inputValue, verb[verbForm], CHECK_INPUT_IRREGULAR_VERB);
         setAnswer(checkedAnswer);
-        if(!checkedAnswer) delay = 3000;
+        if(!checkedAnswer) {
+            delay = 3000;
+            dispatch(addIncorrectIrregularVerb());
+        } else {
+            dispatch(incrementCorrectIrregularVerb());
+        };
         setTimeout(()=> { 
             getRandomVerb();
             setInputValue('');

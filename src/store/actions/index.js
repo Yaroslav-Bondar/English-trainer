@@ -1,7 +1,23 @@
-import {INCREMENT_CORRECT_IRREGULAR_VERB_ANSWERS} from '@store/constants/actionTypes';
+import {
+        ADD_TOTAL_IRREGULAR_VERBS,
+        INCREMENT_CORRECT_IRREGULAR_VERB,
+        ADD_INCORRECT_IRREGULAR_VERB} from '@store/constants/actionTypes';
 
-export addCorrectIrregularVerbAnswer = () => (
+export const setTotalIrregularVerbs = total => (
     {
-        type: INCREMENT_CORRECT_IRREGULAR_VERB_ANSWERS,
+        type: ADD_TOTAL_IRREGULAR_VERBS,
+        payload: total,
     }
 )
+
+export const incrementCorrectIrregularVerb = () => (
+    {
+        type: INCREMENT_CORRECT_IRREGULAR_VERB,
+    }
+);
+
+export const addIncorrectIrregularVerb = () => (
+    {
+        type: ADD_INCORRECT_IRREGULAR_VERB,
+    }
+);

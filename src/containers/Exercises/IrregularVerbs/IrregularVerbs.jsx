@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+import {useDispatch} from 'react-redux';
 // import PropTypes from 'prop-types';
 import IrregularVerbsList from '@components/Exercises/IrregularVerbs/IrregularVerbsList';
+import {setTotalIrregularVerbs} from '@store/actions';
 import { getRandomNumber } from '@services/common';
 import { IRREGULAR_VERBS_DATA } from '@data/irregularVerbs/irregularVerbsData';
 import { MAX_FORM_VERB, VERB_IMAGE_INDEX } from '@constants/irregularVerbs';
@@ -10,17 +12,16 @@ const IrregularVerbs = () => {
     const [verb, setVerb] = useState();
     const [verbForm, setVerbForm] = useState();
     const [verbImagePath, setVerbImagePath] = useState();
-    
-    const maxValue = IRREGULAR_VERBS_DATA.length;
+    const dispatch = useDispatch();
 
+    const maxValue = IRREGULAR_VERBS_DATA.length;
+    dispatch(setTotalIrregularVerbs(maxValue));
+    
     function getRandomVerb() {
         const randomNumber = getRandomNumber(maxValue);
         const randomForm = getRandomNumber(MAX_FORM_VERB);
         const randomVerbData = IRREGULAR_VERBS_DATA[randomNumber];
-        const randomVerb = randomVerbData
-            .filter((item, index) => {
-                return index < VERB_IMAGE_INDEX;
-        });
+        const randomVerb = randomVerbData.slice(0, VERB_IMAGE_INDEX);
         const randomVerbImage = randomVerbData[VERB_IMAGE_INDEX];
 
         setVerb(randomVerb);
