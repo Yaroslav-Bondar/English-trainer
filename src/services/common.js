@@ -3,5 +3,11 @@ export function checkAnswer(answer, underTest, test) {
     const checkAnswer = new RegExp(`\\b${answer.trim()}\\b`, 'i').test(underTest);
     return checkInput && checkAnswer ? true : false;
 }
-
-export const getRandomNumber = max => Math.floor(Math.random() * max);
+/**
+ * random value generation in the range from 0 to max
+ * (the value passed to the function).Including max.
+ * 
+ * @param {Number} max - random maximum value
+ * @returns {Number} random value 
+ */
+export const getRandomNumber = max => Math.round(Math.random() * max);

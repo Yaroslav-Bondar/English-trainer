@@ -1,0 +1,19 @@
+.verb {
+    &__img {
+        height: 40vmin;
+        max-width: 400px;
+        object-fit: contain;
+        pointer-events: none;
+    }
+    &__submit {
+        /* display: none; */
+    }
+    &__native {
+        color: var(--color-malibu);
+        margin: 10px 0 30px 0;
+    }
+    &__title {
+        margin-bottom: 35px;
+    }
+}
+

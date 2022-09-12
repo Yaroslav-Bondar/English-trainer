@@ -1,27 +1,25 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 import PropTypes from 'prop-types';
 import InputVerb from '@components/Exercises/IrregularVerbs/InputVerb';
 import {incrementCorrectIrregularVerb,
         addIncorrectIrregularVerb} from '@store/actions';
-import { checkAnswer } from '@services/common';
-import { CHECK_INPUT_IRREGULAR_VERB, MAX_FORM_VERB } from '@constants/irregularVerbs';
-import styles from './IrregularVerbsList.module.css';
+import {checkAnswer} from '@services/common';
+import {CHECK_INPUT_IRREGULAR_VERB} from '@constants/irregularVerbs';
+import styles from './IrregularVerbsList.module.scss';
 
-const IrregularVerbsList = ({ verb,
-                              verbForm,
-                              getRandomVerb,
-                              verbImagePath }) => {
+const IrregularVerbsList = ({runSetData, 
+                            verbData: vd 
+                            }) => {
     const [inputValue, setInputValue] = useState('');
     const [answer, setAnswer] = useState(null);
-    const [img, setImg] = useState(null);
     const dispatch = useDispatch();
 
-    // console.log('verb from IrregularVerbsList', verb);
     function handleSubmit(event) {
         event.preventDefault();
         let delay = 1000;
-        const checkedAnswer = checkAnswer(inputValue, verb[verbForm], CHECK_INPUT_IRREGULAR_VERB);
+        const checkedAnswer = checkAnswer(inputValue, vd.checkedVerb, CHECK_INPUT_IRREGULAR_VERB);
+
         setAnswer(checkedAnswer);
         if(!checkedAnswer) {
             delay = 3000;
@@ -30,7 +28,7 @@ const IrregularVerbsList = ({ verb,
             dispatch(incrementCorrectIrregularVerb());
         };
         setTimeout(()=> { 
-            getRandomVerb();
+            runSetData();
             setInputValue('');
             setAnswer(null);
         }, delay);
@@ -38,13 +36,12 @@ const IrregularVerbsList = ({ verb,
     
     return (
         <>
-            <h3 className = {styles.verb__title}>Irregular Verbs Trainer</h3>
-            <img className = {styles.verb__img} src={process.env.PUBLIC_URL + verbImagePath} alt="verb"/>
-            <div className={styles.verb__native}>{verb[MAX_FORM_VERB]}</div>
+            <h3 className={styles.verb__title}>Irregular Verbs Trainer</h3>
+            <img className={styles.verb__img} src={process.env.PUBLIC_URL + vd.verbImage} alt="verb"/>
+            <div className={styles.verb__native}>{vd.nativeVerb}</div>
             <form onSubmit={handleSubmit} className={styles.form}>
-                <InputVerb 
-                    verb = {verb} 
-                    verbForm = {verbForm}
+                <InputVerb
+                    verbData = {vd} 
                     answer = {answer}
                     inputValue = {inputValue}
                     setInputValue = {setInputValue}
@@ -56,10 +53,8 @@ const IrregularVerbsList = ({ verb,
 }
 
 IrregularVerbsList.propTypes = {
-    verb: PropTypes.array,
-    verbForm: PropTypes.number,
-    getRandomVerb: PropTypes.func,
-    verbImagePath: PropTypes.string,
+    runSetData: PropTypes.func,
+    verbData: PropTypes.object,
 }
 
 export default IrregularVerbsList;
