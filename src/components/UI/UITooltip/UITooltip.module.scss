@@ -2,14 +2,16 @@
     position: relative;
     &__item {
         position: absolute;
-        padding: 10px;
+        width: auto;
+        padding: 3px 5px;
         border-radius: 3px;
         overflow: hidden;
-        background-color: #EDEDED;
-        width: 300px;
+        color: var(--color-old-rose);
         font-size: 12px;
         box-sizing: border-box;
-        box-shadow: 1px 1px 10px #777;
+        background-color: var(--color-gallery);
+        opacity: .9;
+        box-shadow: 1px 1px 10px var(--color-agart);
         z-index: 9999;
         &_position_top {
             bottom: 130%;

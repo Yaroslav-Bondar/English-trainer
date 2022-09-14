@@ -1,0 +1,11 @@
+.container {
+    padding-right: 15px;
+}
+.list {
+    list-style-type: none;
+    &__link {
+        display: flex;
+        font-size: 2em;
+        text-decoration: none;
+    }
+}

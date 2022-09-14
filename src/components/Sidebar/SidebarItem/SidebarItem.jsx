@@ -12,13 +12,9 @@ const SidebarItem = ({item, min, toggleMin}) => {
     const fullOpen = open && !min;
     const st = classNames.bind(styles);
     const toolTipStyles = {
-        width: 'auto',
         bottom: '105%',
-        padding: '3px 5px',
-        color: '#ba776d',
         transform: 'translateY(0)',
-        opacity: '.9',
-        'white-space': 'nowrap',
+        whiteSpace: 'nowrap',
     }
     const text = item.title;
 

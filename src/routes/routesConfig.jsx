@@ -1,5 +1,6 @@
 import HomePage from '@containers/HomePage';
 import Exercises from '@containers/Exercises';
+import StatisticsPage from '@containers/StatisticsPage';
 
 export const mainRoutesConfig = [
     {
@@ -9,6 +10,10 @@ export const mainRoutesConfig = [
     {
         path: 'exercises/*',
         element: <Exercises/>
+    },
+    {
+        path: 'statistics',
+        element: <StatisticsPage/>
     },
 ];
 

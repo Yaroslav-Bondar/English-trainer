@@ -1,6 +1,7 @@
 import React from 'react';
 // , Outlet
 import {NavLink} from 'react-router-dom';
+import Statistics from '@components/Statistics'
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -26,6 +27,7 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
+            <Statistics/>
         </header>
     );
 }

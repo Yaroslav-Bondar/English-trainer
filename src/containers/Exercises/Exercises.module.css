@@ -6,8 +6,9 @@
 }
 .exercises__sidebar {
     position: fixed;
-    top: 3.55em;
+    top: 4.4em;
     bottom: 0;
+    background-color: var(--color-lead);
 }
 .exercises__content {
     display: flex;

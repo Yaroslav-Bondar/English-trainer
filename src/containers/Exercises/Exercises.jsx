@@ -1,13 +1,12 @@
 import {Routes, Route} from 'react-router-dom';
-import PropTypes from 'prop-types';
+import Sidebar from '@components/Sidebar';
 import Present from './Present';
-import Sidebar from '../../components/Sidebar';
 import PresentSimplePositiveBe 
-    from '../../components/Exercises/Present/presentSimple/presentSimplePositive/PresentSimplePositiveBe';
+    from '@components/Exercises/Present/presentSimple/presentSimplePositive/PresentSimplePositiveBe';
 import PresentSimplePositive1 
-    from '../../components/Exercises/Present/presentSimple/presentSimplePositive/PresentSimplePositive1';
+    from '@components/Exercises/Present/presentSimple/presentSimplePositive/PresentSimplePositive1';
 import IrregularVerbs from './IrregularVerbs';
-
+import items from '@data/sidebar/exerciseSidebar.json';
 import styles from './Exercises.module.css';
 
 const Exercises = () => {
@@ -15,16 +14,11 @@ const Exercises = () => {
         <>
             <div className={styles.exercises__container}>
                 <div className={styles.exercises__sidebar}>
-                    <Sidebar/>
+                    <Sidebar items={items}/>
                 </div>
                 <div className={styles.exercises__content}>
                     <h1>Exercises</h1>
-                    {/* <div> */}
                     <Routes>
-                        {/* <Route
-                            path='present/*'
-                            element={<Present/>}
-                        /> */}
                         <Route
                             path='present'
                             element={<Present/>}
@@ -43,15 +37,10 @@ const Exercises = () => {
                             element={<IrregularVerbs/>}
                         />
                     </Routes>    
-                    {/* </div> */}
                 </div> 
             </div>
         </>
     );
-}
-
-Exercises.propTypes = {
-    // text: PropTypes.
 }
 
 export default Exercises;
